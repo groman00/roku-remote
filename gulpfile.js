@@ -18,7 +18,7 @@ var buildRoot = './public',
 gulp.task('css', function () {
     gulp.src(resourceRoot + '/scss/main.scss')
         .pipe(sass())
-        .pipe(minifycss({keepBreaks:true}))        
+        .pipe(minifycss({keepBreaks:true}))
         .pipe(rename('style.css'))
         .pipe(gulp.dest(buildRoot + '/css'));
 });
@@ -38,11 +38,20 @@ gulp.task('js', function () {
 
 
 /**
+ * Fonts
+ */
+gulp.task('fonts', function () {
+    gulp.src(resourceRoot + '/fonts/*')
+        .pipe(gulp.dest(buildRoot + '/fonts'));
+});
+
+/**
  * Defaults
  */
-gulp.task('default', ['css', 'js']);
+gulp.task('default', ['css', 'js', 'fonts']);
 
 gulp.task('watch', function(){
     gulp.watch(resourceRoot + '/scss/**', ['css']);
     gulp.watch(resourceRoot + '/js/**', ['js']);
+    gulp.watch(resourceRoot + '/fonts/**', ['fonts']);
 });

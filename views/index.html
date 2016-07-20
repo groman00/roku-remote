@@ -9,8 +9,27 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <div id="remote">
-            <button data-key="up">Up</button>
+        <div id="remote" class="remote">
+            <div class="button-row">
+                <button data-key="back"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                <button data-key="up"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+                <button data-key="home"><i class="fa fa-home" aria-hidden="true"></i></button>
+            </div>
+            <div class="button-row">
+                <button data-key="left"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                <button data-key="select"><i class="fa fa-dot-circle-o" aria-hidden="true"></i></button>
+                <button data-key="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="button-row">
+                <button data-key="instantreplay"><i class="fa fa-reply" aria-hidden="true"></i></button>
+                <button data-key="down"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                <button data-key="info"><i class="fa fa-asterisk" aria-hidden="true"></i></button>
+            </div>
+            <div class="button-row">
+                <button data-key="Rev"><i class="fa fa-backward" aria-hidden="true"></i></button>
+                <button data-key="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button data-key="fwd"><i class="fa fa-forward" aria-hidden="true"></i></button>
+            </div>            
         </div>
         <script src="./js/bundle.js"></script>
     </body>

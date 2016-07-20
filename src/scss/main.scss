@@ -1,1 +1,29 @@
-@import './vendor/reset'
+@import './vendor/reset';
+@import '../../node_modules/font-awesome/scss/font-awesome.scss';
+
+html,
+body,
+.remote{
+    height: 100%;
+    width: 100%;
+}
+
+.remote{
+    display: table;
+
+    .button-row{
+        display: table-row;
+    }
+
+    button{
+        display: table-cell;
+        padding: 0;
+        height: 100%;
+        width: (1 / 3) * 100%;
+
+        .fa{
+            font-size: 40px;
+            font-size: 20vw;
+        }
+    }
+}

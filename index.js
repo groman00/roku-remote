@@ -18,9 +18,6 @@ app.get('/', function(req, res){
  */
 var device = new Roku('http://192.168.1.188:8060/');
 
-
-
-
 io.on('connection', function(socket){
   
   console.log('a user connected');
@@ -28,8 +25,8 @@ io.on('connection', function(socket){
   socket.on('remote button clicked', function(key){
     
     console.log('key pressed: ' + key);
-    //console.log(Roku)
-    device.press(Roku.UP);
+
+    device.press(Roku[key.toUpperCase()]);
 
   });  
 });
