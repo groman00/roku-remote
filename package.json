@@ -1,0 +1,27 @@
+{
+  "name": "roku-remote",
+  "version": "1.0.0",
+  "description": "A web version of the Roku remote control",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "groman00",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.2",
+    "jquery": "^3.1.0",
+    "roku": "^0.2.0",
+    "socket.io": "^1.4.8"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4"
+  }
+}
