@@ -12,7 +12,7 @@
   "dependencies": {
     "express": "^4.10.2",
     "jquery": "^3.1.0",
-    "roku": "^0.2.0",
+    "roku": "github:groman00/node-roku",
     "socket.io": "^1.4.8"
   },
   "devDependencies": {

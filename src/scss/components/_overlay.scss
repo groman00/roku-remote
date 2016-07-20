@@ -6,13 +6,11 @@
     right:0;
     bottom:0;
     background: rgba(0, 0, 0, .9);
-
-    &.fade{
-
-    }
+    transform: translate3d(0, -100%, 0);
+    transition: transform 300ms ease-in-out;
 
     &.in{
-        
+        transform: translate3d(0, 0, 0);        
     } 
 }
 
@@ -26,7 +24,7 @@
 .ip-address-form{
     text-align: center;
     padding: 40px;
-    
+
     label,
     input,
     button{
@@ -81,6 +79,23 @@
         &:hover{
             background-color: $roku_purple_dark;
             border-color: $roku_purple_dark;
+        }
+    }
+
+    .error-message{
+        display:none;
+        margin-bottom: 20px;
+        color: red;
+    }
+
+    &.has-error{
+        
+        .error-message{
+            display:block;
+        }
+
+        input{
+            border-color:red;
         }
     }
 }
