@@ -16,14 +16,11 @@ io.on('connection', function(socket){
 
   socket.on('remote button clicked', function(key){
     console.log('key pressed: ' + key);
-    //console.log(socket.device);
-
     if(socket.device) {
       socket.device.press(Roku[key.toUpperCase()]);
     } else {
       socket.emit('abort');
     }
-
   }); 
 
   socket.on('verify ip', function(ip){
@@ -46,5 +43,3 @@ io.on('connection', function(socket){
 http.listen(3000, function(){
   console.log('listening on *:3000');
 });
-
-
