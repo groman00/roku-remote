@@ -27,13 +27,19 @@ var $form = $('#ipAddressForm');
 var $input = $('#ipAddress');
 
 function toggleFormError(bool){
+    toggleFormLoading(false);
     $form.toggleClass('has-error', bool);
+};
+
+function toggleFormLoading(bool){
+    $form.toggleClass('has-loading', bool);
 };
 
 $form.on('submit', function(e){
     var value = $input.val().trim();
 
     toggleFormError(false);
+    toggleFormLoading(true);
 
     if(value > '') {
         socket.emit('verify ip', value);
@@ -50,6 +56,8 @@ socket.on('ip failed', function () {
 
 socket.on('ip verified', function (info) {
     $overlay.removeClass('in');
+    $input.val('');
+    toggleFormLoading(false);
 });
 
 socket.on('abort', function (info) {

@@ -15,10 +15,30 @@
 }
 
 .overlay-content{
+    position: relative;
     background: #fff;
     width: 75%;
     max-width: 600px;
     margin: 20% auto 0;
+}
+
+.loading-indicator{
+    display:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, .75);    
+
+    .fa{
+        color: $roku_purple;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -24px 0 0 -31px;
+    }
 }
 
 .ip-address-form{
@@ -96,6 +116,13 @@
 
         input{
             border-color:red;
+        }
+    }
+
+    &.has-loading{
+        
+        .loading-indicator{
+            display:block;
         }
     }
 }
