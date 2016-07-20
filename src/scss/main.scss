@@ -1,13 +1,28 @@
+$roku_purple: #662d91;
+$roku_purple_dark: #552a7b;
+
 @import './vendor/reset';
 @import '../../node_modules/font-awesome/scss/font-awesome.scss';
+@import './components/overlay';
 
-$roku_purple: #662d91;
+*{
+    box-sizing: border-box;
+}
+
+button:focus,
+input:focus{
+    outline:none;
+}
 
 html,
 body{
+    overflow: hidden;
     height: 100%;
     width: 100%;
     background: $roku_purple;
+    font-family: 'helevetica neueu', helvetica, arial, sans-serif;
+    font-size:16px;
+    line-height:1.4;
 }
 
 .remote{
@@ -49,8 +64,25 @@ body{
     }
 }
 
-.ip-address-form{
 
+
+@media (min-width:900px){
+    
+    .remote{
+        width: 800px;
+        width: 600px;
+        top: 0;
+        left: 0;
+        margin:40px auto;
+    }
+
+    .button{
+        
+        .fa{
+            font-size: 120px;
+        }
+    }
 }
+
 
 

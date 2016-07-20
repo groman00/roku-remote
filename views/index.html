@@ -31,6 +31,15 @@
                 <button class="button" data-key="fwd"><i class="fa fa-forward" aria-hidden="true"></i></button>
             </div>            
         </div>
+        <div id="ip-overlay" class="overlay fade in" style="display:none;">
+            <div class="overlay-content">
+                <form id="ipAddressForm" class="ip-address-form">
+                    <label for="ipAddress">Please enter Roku IP Address</label>
+                    <input id="ipAddress" type="text" name="address" placeholder="192.168.1.100" required>
+                    <button type="submit">Launch Remote!</button>
+                </form>
+            </div>
+        </div>
         <script src="./js/bundle.js"></script>
     </body>
 </html>
