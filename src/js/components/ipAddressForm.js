@@ -1,6 +1,8 @@
 var $ = require('jquery');
-var cookie = require('../cookie');
-var cookieName = 'roku_ip_address';
+var storage = require('../storage');
+var storageKey = 'roku_ip_address';
+
+
 
 module.exports = function(socket){
 
@@ -10,7 +12,7 @@ module.exports = function(socket){
 
   //fill out previous ip address, if available
   $(function(){
-      var ip = cookie.get(cookieName);
+      var ip = storage.get(storageKey);
       if(ip) {
           $input.val(ip);
       }
@@ -46,7 +48,7 @@ module.exports = function(socket){
   });
 
   socket.on('ip verified', function (info) {
-      cookie.set(cookieName, $input.val(), 1)
+      storage.set(storageKey, $input.val());
       $overlay.removeClass('in');
       $input.val('');
       toggleFormLoading(false);
