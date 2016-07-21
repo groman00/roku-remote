@@ -1,5 +1,7 @@
 var $ = require('jquery');
 var socket = require('socket.io-client')();
+var cookie = require('./cookie');
+var cookieName = 'roku_ip_address';
 
 
 /**
@@ -14,6 +16,18 @@ $remote.on('click', '.button', function(e){
 });
 
 
+
+/**
+ *  Keyboard Event Handling
+ *  todo: make this a module
+ */
+
+$("body").on("keypress", function (e) {
+    console.log(e);
+});
+
+
+
 /**
  * Ip Address form handling
  * todo: make this a module
@@ -22,6 +36,14 @@ $remote.on('click', '.button', function(e){
 var $overlay = $('#ipOverlay');
 var $form = $('#ipAddressForm');
 var $input = $('#ipAddress');
+
+//fill out previous ip address, if available
+$(function(){
+    var ip = cookie.get(cookieName);
+    if(ip) {
+        $input.val(ip);
+    }
+});
 
 function toggleFormError(bool){
     toggleFormLoading(false);
@@ -52,6 +74,7 @@ socket.on('ip failed', function () {
 });
 
 socket.on('ip verified', function (info) {
+    cookie.set(cookieName, $input.val(), 1)
     $overlay.removeClass('in');
     $input.val('');
     toggleFormLoading(false);
