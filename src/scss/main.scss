@@ -24,5 +24,15 @@ body{
     line-height:1.4;
 }
 
+.keyboard-shortcut-toggle{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-decoration: none;
+    font-size:14px;
+}
+
 @import './components/remote';
 @import './components/overlay';

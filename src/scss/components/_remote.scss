@@ -14,6 +14,7 @@
     }
 
     .button{
+        position: relative;
         display: table-cell;
         background:0;
         border:0;
@@ -27,6 +28,8 @@
         .fa{
             font-size: 50px;
             font-size: 14vw;
+            opacity:1;
+            transition: opacity 300ms ease-in-out;
         }
 
         &:hover{
@@ -35,7 +38,30 @@
             background-color: rgba(102, 45, 145, .25);
         }
     }    
+    
+    .shortcut{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 20px;        
+        opacity:0;
+        transition: opacity 300ms ease-in-out;
+    }
 }
+
+.remote.shortcuts-visible{
+
+    .button .fa{
+        opacity:0;
+    }
+
+    .shortcut{
+        opacity:1;
+    }
+}
+
+
 
 @media (min-width:900px){
     
