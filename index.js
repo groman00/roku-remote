@@ -7,7 +7,7 @@ var Roku = require('roku');
 app.use(express.static('public'));
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/views/index.html');
+  res.sendFile(__dirname + '/dist/index.html');
 });
 
 io.on('connection', function(socket){

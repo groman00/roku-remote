@@ -2,9 +2,9 @@
   "name": "roku-remote",
   "version": "1.0.0",
   "description": "A web version of the Roku remote control",
-  "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "build": "parcel build ./src/index.html --dist-dir public",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "groman00",
@@ -13,16 +13,13 @@
     "express": "^4.10.2",
     "jquery": "^3.1.0",
     "roku": "github:groman00/node-roku",
-    "socket.io": "^1.4.8"
+    "socket.io": "^1.4.8",
+    "socket.io-client": "^1.4.8"
   },
   "devDependencies": {
-    "font-awesome": "^4.6.3",
-    "gulp": "^3.9.1",
-    "gulp-browserify": "^0.5.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^1.5.4"
+    "@parcel/transformer-sass": "^2.13.3",
+    "parcel": "^2.13.3",
+    "process": "^0.11.10",
+    "svgo": "^3.3.2"
   }
 }

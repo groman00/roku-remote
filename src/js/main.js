@@ -1,4 +1,6 @@
-var $ = require('jquery');
+// var $ = require('jquery');
+import "jquery";
+
 var socket = require('socket.io-client')();
 require('./components/ipAddressForm')(socket);
 require('./components/remote')(socket);

@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+button:focus,
+input:focus{
+    outline:none;
+}
+
+html,
+body{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background: $roku_purple;
+    font-family: 'helevetica neueu', helvetica, arial, sans-serif;
+    font-size:16px;
+    line-height:1.4;
+}
+
+.keyboard-shortcut-toggle{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-decoration: none;
+    font-size:14px;
+}
