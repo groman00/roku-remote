@@ -9,3 +9,11 @@ require('./components/remote')(socket);
 socket.on('abort', function (info) {
   window.location.reload();
 });
+
+if ('serviceWorker' in navigator) {
+  // navigator.serviceWorker.register("/serviceWorker.js");
+  navigator.serviceWorker.register(
+    new URL('./sw.js', import.meta.url),
+    {type: 'module'}
+  );
+}

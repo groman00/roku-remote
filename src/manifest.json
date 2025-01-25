@@ -1,0 +1,29 @@
+{
+  "name": "Roku Remote",
+  "background_color": "#000000",
+  "display": "standalone",
+  "start_url": "/",
+  "id": "/",
+  "icons": [
+    {
+      "src": "./img/apple-touch-icon-180x180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./img/screenshot.png",
+      "sizes": "800x921",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Roku Remote"
+    },
+    {
+      "src": "./img/screenshot.png",
+      "sizes": "800x921",
+      "type": "image/png",
+      "label": "Roku Remote"
+    }
+  ]
+}
